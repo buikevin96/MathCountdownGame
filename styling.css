@@ -12,4 +12,36 @@ html{
     padding: 20px; 
     border-radius: 10px; /* Rounds the corners */
     box-shadow: 4px 4px 0px 0px #009de4;
+    position: relative;
+}
+
+/* Score Box */
+#score{
+    background-color: #F1FF92;
+    color: #888E5F; /* Text Color */
+    padding: 11px;
+    position: absolute;
+    left: 450px;
+    border-radius: 5px;
+    box-shadow: 0px 4px #F8CDA0;
+}
+
+/* Correct Box */
+#correct{
+    position: absolute;
+    left: 235px;
+    background-color: #70EE49;
+    color: white;
+    padding: 13px;
+    display: none; /* Hides the box */
+}
+
+/* Wrong Box */
+#wrong{
+    position: absolute;
+    left: 230px;
+    background-color: #E93223;
+    color: white;
+    padding: 13px;
+    display: none; /* Hides the box */
 }
