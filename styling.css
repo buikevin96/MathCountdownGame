@@ -12,6 +12,8 @@ html{
     padding: 20px; 
     border-radius: 10px; /* Rounds the corners */
     box-shadow: 4px 4px 0px 0px #009de4;
+    -moz-box-shadow: 4px 4px 0px 0px #009de4; /* Mozilla */
+    -webkit-box-shadow: 4px 4px 0px 0px #009de4; /* Safari */
     position: relative;
 }
 
@@ -85,6 +87,12 @@ html{
     cursor: pointer;
     line-height: 80px; /* Works after you use text-align */
     text-align: center;
+    position: relative;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Mozilla */
+    -o-transition: all 0.2s; /* Opera */
+    -ms-transition: all 0.2s; /* Microsoft */
 }
 
 #box4{
@@ -95,4 +103,27 @@ html{
 .box:hover{
     background-color: #9C89F6;
     color: white; /* Change text to white */
+}
+
+/* When the box is clicked, it will move like it's getting pressed */
+.box:active {
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
+
+#startReset{
+    width: 80px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    box-shadow: 2px 4px #B0C4DE;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Mozilla */
+    -o-transition: all 0.2s; /* Opera */
+    -ms-transition: all 0.2s; /* Microsoft */
 }
