@@ -100,13 +100,13 @@ html{
 }
 
 /* When cursor hovers over */
-.box:hover{
+.box:hover,  #startReset:hover{
     background-color: #9C89F6;
     color: white; /* Change text to white */
 }
 
 /* When the box is clicked, it will move like it's getting pressed */
-.box:active {
+.box:active, #startReset:active {
     box-shadow: 0px 0px #6b54d3;
     top: 4px;
 }
@@ -126,4 +126,17 @@ html{
     -moz-transition: all 0.2s; /* Mozilla */
     -o-transition: all 0.2s; /* Opera */
     -ms-transition: all 0.2s; /* Microsoft */
+}
+
+#timeRemaining{
+    width: 163px;
+    padding: 10px;
+    position: absolute;
+    top: 395px;
+    left: 345px;
+    background-color: rgba(181, 235, 36, 0.8);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+   /* visibility: hidden;  Will still be present */
+    display: none;
 }
