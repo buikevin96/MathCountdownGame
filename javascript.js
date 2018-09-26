@@ -71,9 +71,13 @@ function generateQA(){
     document.getElementById("box" + correctPosition).innerHTML = correctAnswer; /* Fill one box with the correct answer */
 
     /* Fill other boxes with wrong answers */
+    var answers = [correctAnswer];
     for(i=1; i<5; i++){
         if(i !== correctPosition){
-            var wrongAnswer = (1 + Math.round(9 * Math.random()))*(1 + Math.round(9 * Math.random())); /* Numbers 1 - 10*/
+            var wrongAnswer;
+
+            do{wrongAnswer = (1 + Math.round(9 * Math.random()))*(1 + Math.round(9 * Math.random())); /* Numbers 1 - 10*/}while(wrongAnswer == correctAnswer)
+            
             document.getElementById("box" +i).innerHTML = wrongAnswer;
         }
     }
