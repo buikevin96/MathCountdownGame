@@ -2,6 +2,7 @@ var playing = false; // Game starts at not playing
 var score;
 var action;
 var timeremaining;
+var correctAnswer
 
 // When startReset button is clicked
 document.getElementById("startReset").onclick = function(){
@@ -62,5 +63,18 @@ function show(Id){
 }
 
 function generateQA(){
+    var x = 1 + Math.round(9 * Math.random()); /* Numbers 1 - 10*/
+    var y = 1 + Math.round(9 * Math.random()); /* Numbers 1 - 10*/
+    correctAnswer = x*y;
+    document.getElementById("question").innerHTML = x + "x" + y; /* Changes the math problem */
+    var correctPosition = 1 + Math.round(3 * Math.random()); /* Numbers 1 - 4*/
+    document.getElementById("box" + correctPosition).innerHTML = correctAnswer; /* Fill one box with the correct answer */
 
+    /* Fill other boxes with wrong answers */
+    for(i=1; i<5; i++){
+        if(i !== correctPosition){
+            var wrongAnswer = (1 + Math.round(9 * Math.random()))*(1 + Math.round(9 * Math.random())); /* Numbers 1 - 10*/
+            document.getElementById("box" +i).innerHTML = wrongAnswer;
+        }
+    }
 }
